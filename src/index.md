@@ -1,6 +1,7 @@
 ---
 layout: base
-title: My Sample Site
+title: Home
+tags: [main]
 ---
 
 # Sample Sites
