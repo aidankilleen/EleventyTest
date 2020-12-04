@@ -1,0 +1,26 @@
+{
+  "name": "EleventyTest",
+  "version": "1.0.0",
+  "description": "Eleventy Test Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start:dev": "npx eleventy --watch --serve", 
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidankilleen/EleventyTest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aidankilleen/EleventyTest/issues"
+  },
+  "homepage": "/EleventyTest",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "gh-pages": "^3.1.0"
+  }
+}
