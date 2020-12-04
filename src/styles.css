@@ -1,0 +1,51 @@
+html, body {
+    background-color: #eee;
+    margin: 0;
+  }
+  
+  main {
+    box-sizing: border-box;
+    max-width: 1024px;
+    min-height: 100vh;
+    padding: 2em;
+    margin: 0 auto;
+    background: white;
+  }
+
+.section_text {
+  height: 300px;
+}
+.section_image {
+  min-height: 300px;
+}
+.section_panel {
+  height: 300px;
+}
+.body section:nth-child(odd) {
+  background-color: var(--main-color);
+
+}
+.body section:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+.clip-circle {
+  clip-path: circle(60px at center);
+}
+
+.section_circlelist {
+  display: flex;
+  flex-direction: row;
+}
+
+.section_circlelist_item {
+  flex: 25% 1 1;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}

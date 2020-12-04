@@ -1,5 +1,5 @@
 module.exports = {
     author: 'Aidan Killeen', 
     copyrightYear: (new Date()).getFullYear(),
-    styles: "/style.css"
+    styles: "/styles.css"
 }

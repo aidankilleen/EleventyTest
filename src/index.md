@@ -3,11 +3,13 @@ layout: base
 title: Home
 tags: [main]
 ---
+<style>
 
-# Sample Sites
 
-{% for post in collections.posts %}
+</style>
 
-- [{{ post.data.title }}]({{ post.url | url }})
+{% for section in homepage.sections %}
+
+{{ section | makeSection }}
 
 {% endfor %}
