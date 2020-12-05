@@ -1,7 +1,3 @@
-let markdown = require("markdown-it")({
-    html: true
-});
-
 module.exports = function(config) {
 
 
@@ -36,6 +32,16 @@ module.exports = function(config) {
 
                 html += `</section>`;
                 break;
+            case "masthead":
+                html = `<header class="masthead" style="background-image:url(${ config.getFilter("url")(section.image)})">
+                            <div class="container">
+                                <div class="masthead-subheading">${ section.subheading }</div>
+                                <div class="masthead-heading text-uppercase">${ section.heading }</div>
+                                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="${config.getFilter("url")(section.ctaTarget)}#services">${ section.cta }</a>
+                            </div>
+                        </header>`;
+
+                break;
             default: 
                 html = `<section class="section_text"><div>${JSON.stringify(section)}</div></section>`;
                 break;
@@ -51,6 +57,7 @@ module.exports = function(config) {
 
     config.addPassthroughCopy({
         './src/_includes/style.css': 'style.css', 
+        './src/_includes/scrollerstyles.css': 'scrollerstyles.css',
         './src/img': 'img'
     });
 

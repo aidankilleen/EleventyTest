@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{ '/' | url }}">Navbar</a>
+  <a class="navbar-brand" href="{{ '/' | url }}">{{ site.company }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,7 +9,7 @@
 
         {% for item in collections.main %}
             <li {% if item.url == page.url %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
-                <a class="nav-link" href="{{item.url | url}}">{{item.data.title}}</a>
+                <a class="nav-link" href="{{item.url | url}}">{{ item.data.title }}</a>
             </li>
         {% endfor%}
 
